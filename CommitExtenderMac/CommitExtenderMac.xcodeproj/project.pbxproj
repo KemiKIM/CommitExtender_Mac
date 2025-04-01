@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB80A4DF2C7F057200B85150 /* CustomWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4DE2C7F057200B85150 /* CustomWindowController.swift */; };
+		DB80A4E12C7F058800B85150 /* NSView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E02C7F058800B85150 /* NSView+.swift */; };
+		DB80A4E32C7F05CA00B85150 /* CustomSplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E22C7F05CA00B85150 /* CustomSplitVC.swift */; };
+		DB80A4E52C7F05FC00B85150 /* LeftListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E42C7F05FC00B85150 /* LeftListVC.swift */; };
+		DB80A4E82C7F074500B85150 /* CustomEmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E72C7F074500B85150 /* CustomEmojiVC.swift */; };
+		DB80A4EB2C7F108000B85150 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4EA2C7F108000B85150 /* SettingVC.swift */; };
+		DBA711572C76F39600EAE5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA711562C76F39600EAE5EB /* AppDelegate.swift */; };
+		DBA711592C76F39600EAE5EB /* CommitExtenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA711582C76F39600EAE5EB /* CommitExtenderVC.swift */; };
+		DBA7115B2C76F39700EAE5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA7115A2C76F39700EAE5EB /* Assets.xcassets */; };
+		DBA7115E2C76F39700EAE5EB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBA7115D2C76F39700EAE5EB /* Base */; };
+		DBA711662C76F3E300EAE5EB /* CommitExtenderVC+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA711652C76F3E300EAE5EB /* CommitExtenderVC+UI.swift */; };
+		DBA711682C76F3EB00EAE5EB /* GitEmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA711672C76F3EB00EAE5EB /* GitEmojiModel.swift */; };
+		DBA7116B2C76F47600EAE5EB /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DBA7116A2C76F47600EAE5EB /* Then */; };
+		DBA711732C76F48600EAE5EB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DBA711722C76F48600EAE5EB /* SnapKit */; };
+		DBB022E92C7D510E00CD7C51 /* Alert+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB022E82C7D510E00CD7C51 /* Alert+.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB80A4DE2C7F057200B85150 /* CustomWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWindowController.swift; sourceTree = "<group>"; };
+		DB80A4E02C7F058800B85150 /* NSView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+.swift"; sourceTree = "<group>"; };
+		DB80A4E22C7F05CA00B85150 /* CustomSplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitVC.swift; sourceTree = "<group>"; };
+		DB80A4E42C7F05FC00B85150 /* LeftListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftListVC.swift; sourceTree = "<group>"; };
+		DB80A4E72C7F074500B85150 /* CustomEmojiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmojiVC.swift; sourceTree = "<group>"; };
+		DB80A4EA2C7F108000B85150 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		DBA711532C76F39600EAE5EB /* CommitExtenderMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitExtenderMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA711562C76F39600EAE5EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBA711582C76F39600EAE5EB /* CommitExtenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitExtenderVC.swift; sourceTree = "<group>"; };
+		DBA7115A2C76F39700EAE5EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBA7115D2C76F39700EAE5EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBA7115F2C76F39700EAE5EB /* CommitExtenderMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommitExtenderMac.entitlements; sourceTree = "<group>"; };
+		DBA711652C76F3E300EAE5EB /* CommitExtenderVC+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommitExtenderVC+UI.swift"; sourceTree = "<group>"; };
+		DBA711672C76F3EB00EAE5EB /* GitEmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitEmojiModel.swift; sourceTree = "<group>"; };
+		DBB022E82C7D510E00CD7C51 /* Alert+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBA711502C76F39600EAE5EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA7116B2C76F47600EAE5EB /* Then in Frameworks */,
+				DBA711732C76F48600EAE5EB /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB80A4DB2C7F054500B85150 /* CommitExtender */ = {
+			isa = PBXGroup;
+			children = (
+				DBB022EA2C7D5B6400CD7C51 /* Model */,
+				DBB022EB2C7D5B6C00CD7C51 /* Controller */,
+			);
+			path = CommitExtender;
+			sourceTree = "<group>";
+		};
+		DB80A4DC2C7F055300B85150 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				DB80A4DE2C7F057200B85150 /* CustomWindowController.swift */,
+				DB80A4E22C7F05CA00B85150 /* CustomSplitVC.swift */,
+				DB80A4E42C7F05FC00B85150 /* LeftListVC.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		DB80A4E62C7F073A00B85150 /* CustomEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				DB80A4E72C7F074500B85150 /* CustomEmojiVC.swift */,
+			);
+			path = CustomEmoji;
+			sourceTree = "<group>";
+		};
+		DB80A4E92C7F107700B85150 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DB80A4EA2C7F108000B85150 /* SettingVC.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		DBA7114A2C76F39600EAE5EB = {
+			isa = PBXGroup;
+			children = (
+				DBA711552C76F39600EAE5EB /* CommitExtenderMac */,
+				DBA711542C76F39600EAE5EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBA711542C76F39600EAE5EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBA711532C76F39600EAE5EB /* CommitExtenderMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBA711552C76F39600EAE5EB /* CommitExtenderMac */ = {
+			isa = PBXGroup;
+			children = (
+				DBB022E72C7D510700CD7C51 /* Helper */,
+				DB80A4DC2C7F055300B85150 /* Start */,
+				DB80A4DB2C7F054500B85150 /* CommitExtender */,
+				DB80A4E62C7F073A00B85150 /* CustomEmoji */,
+				DB80A4E92C7F107700B85150 /* Setting */,
+				DBA711562C76F39600EAE5EB /* AppDelegate.swift */,
+				DBA7115A2C76F39700EAE5EB /* Assets.xcassets */,
+				DBA7115C2C76F39700EAE5EB /* Main.storyboard */,
+				DBA7115F2C76F39700EAE5EB /* CommitExtenderMac.entitlements */,
+			);
+			path = CommitExtenderMac;
+			sourceTree = "<group>";
+		};
+		DBB022E72C7D510700CD7C51 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DBB022E82C7D510E00CD7C51 /* Alert+.swift */,
+				DB80A4E02C7F058800B85150 /* NSView+.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DBB022EA2C7D5B6400CD7C51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBA711672C76F3EB00EAE5EB /* GitEmojiModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBB022EB2C7D5B6C00CD7C51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBA711582C76F39600EAE5EB /* CommitExtenderVC.swift */,
+				DBA711652C76F3E300EAE5EB /* CommitExtenderVC+UI.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBA711522C76F39600EAE5EB /* CommitExtenderMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA711622C76F39700EAE5EB /* Build configuration list for PBXNativeTarget "CommitExtenderMac" */;
+			buildPhases = (
+				DBA7114F2C76F39600EAE5EB /* Sources */,
+				DBA711502C76F39600EAE5EB /* Frameworks */,
+				DBA711512C76F39600EAE5EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommitExtenderMac;
+			packageProductDependencies = (
+				DBA7116A2C76F47600EAE5EB /* Then */,
+				DBA711722C76F48600EAE5EB /* SnapKit */,
+			);
+			productName = CommitExtenderMac;
+			productReference = DBA711532C76F39600EAE5EB /* CommitExtenderMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBA7114B2C76F39600EAE5EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					DBA711522C76F39600EAE5EB = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = DBA7114E2C76F39600EAE5EB /* Build configuration list for PBXProject "CommitExtenderMac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBA7114A2C76F39600EAE5EB;
+			packageReferences = (
+				DBA711692C76F47600EAE5EB /* XCRemoteSwiftPackageReference "Then" */,
+				DBA711712C76F48600EAE5EB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = DBA711542C76F39600EAE5EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBA711522C76F39600EAE5EB /* CommitExtenderMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBA711512C76F39600EAE5EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA7115B2C76F39700EAE5EB /* Assets.xcassets in Resources */,
+				DBA7115E2C76F39700EAE5EB /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBA7114F2C76F39600EAE5EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB80A4E52C7F05FC00B85150 /* LeftListVC.swift in Sources */,
+				DBA711662C76F3E300EAE5EB /* CommitExtenderVC+UI.swift in Sources */,
+				DB80A4E82C7F074500B85150 /* CustomEmojiVC.swift in Sources */,
+				DBB022E92C7D510E00CD7C51 /* Alert+.swift in Sources */,
+				DB80A4DF2C7F057200B85150 /* CustomWindowController.swift in Sources */,
+				DBA711592C76F39600EAE5EB /* CommitExtenderVC.swift in Sources */,
+				DBA711572C76F39600EAE5EB /* AppDelegate.swift in Sources */,
+				DB80A4EB2C7F108000B85150 /* SettingVC.swift in Sources */,
+				DB80A4E12C7F058800B85150 /* NSView+.swift in Sources */,
+				DBA711682C76F3EB00EAE5EB /* GitEmojiModel.swift in Sources */,
+				DB80A4E32C7F05CA00B85150 /* CustomSplitVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBA7115C2C76F39700EAE5EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA7115D2C76F39700EAE5EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBA711602C76F39700EAE5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBA711612C76F39700EAE5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		DBA711632C76F39700EAE5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommitExtenderMac/CommitExtenderMac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.2;
+				DEVELOPMENT_TEAM = AF29P2AX2D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.seongho.CommitExtenderMac.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DBA711642C76F39700EAE5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommitExtenderMac/CommitExtenderMac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.2;
+				DEVELOPMENT_TEAM = AF29P2AX2D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.seongho.CommitExtenderMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBA7114E2C76F39600EAE5EB /* Build configuration list for PBXProject "CommitExtenderMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA711602C76F39700EAE5EB /* Debug */,
+				DBA711612C76F39700EAE5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA711622C76F39700EAE5EB /* Build configuration list for PBXNativeTarget "CommitExtenderMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA711632C76F39700EAE5EB /* Debug */,
+				DBA711642C76F39700EAE5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBA711692C76F47600EAE5EB /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		DBA711712C76F48600EAE5EB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBA7116A2C76F47600EAE5EB /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBA711692C76F47600EAE5EB /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		DBA711722C76F48600EAE5EB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBA711712C76F48600EAE5EB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DBA7114B2C76F39600EAE5EB /* Project object */;
+}

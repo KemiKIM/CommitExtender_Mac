@@ -1,0 +1,68 @@
+1. .app으로 내보내고 난 후,
+
+2. 터미널
+brew install create-dmg
+
+3. .app에 있는 폴더에서, 다음과 같은 명령어 실행
+
+create-dmg \
+  --volname "CommitExtenderMac Installer" \
+  --window-pos 350 200 \
+  --window-size 700 400 \
+  --icon-size 150 \
+  --icon "CommitExtenderMac.app" 150 150 \
+  --hide-extension "CommitExtenderMac.app" \
+  --app-drop-link 550 150 \
+  --background background.png \
+  "CommitExtenderMac.dmg" \
+  "CommitExtenderMac.app"
+
+
+
+명령어 수정 시 참고사항
+
+
+
+ --window-pos 200 120 \
+-> 화면이 열릴 때 Finder 창의 위치 설정 (x,y좌표)
+
+  --window-size 700 500 \
+-> 창의 크기 설정
+
+--icon-size 100 \
+-> 아이콘 크기 설정 (100x100)
+
+--icon "CommitExtenderMac.app" 150 150 \
+-> 아이콘을 지정하고, 위치 설정 (x,y좌표)
+
+--app-drop-link 550 150 \
+-> 드롭 영역 표시 (x,y좌표)
+-> 이것만 봤을 때는 응용프로그램 폴더 위치는 나타내는 것 같다.
+
+--background /path/to/your/background.png \
+-> 배경화면 변경 (Finder사이즈에 맞게끔 수정 필요)
+
+
+
+
+
+
+4. 명령어 확인
+
+
+---------------------------
+
+
+Drag C.E.M to Applications
+
+
+
+
+
+
+
+
+
+
+
+

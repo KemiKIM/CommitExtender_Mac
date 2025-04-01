@@ -1,0 +1,24 @@
+
+
+1. 아이콘 파일을 다운
+2. 키노트에 슬라이드 배경을 제거 후 그 위에 도형 - 그 위에 아이콘 삽입
+3. 저장할 때는 투명배경을 포함한 png로 저장
+4. 터미널로 작업 필요
+5. 폴더 생성 
+mkdir MyIcon.iconset
+
+6. 이미지 사이즈별로 생성 
+
+001.png --out MyIcon.iconset/icon_16x16.png
+sips -z 32 32     001.png --out MyIcon.iconset/icon_16x16@2x.png
+sips -z 32 32     001.png --out MyIcon.iconset/icon_32x32.png
+sips -z 64 64     001.png --out MyIcon.iconset/icon_32x32@2x.png
+sips -z 128 128   001.png --out MyIcon.iconset/icon_128x128.png
+sips -z 256 256   001.png --out MyIcon.iconset/icon_128x128@2x.png
+sips -z 256 256   001.png --out MyIcon.iconset/icon_256x256.png
+sips -z 512 512   001.png --out MyIcon.iconset/icon_256x256@2x.png
+sips -z 512 512   001.png --out MyIcon.iconset/icon_512x512.png
+sips -z 1024 1024 001.png --out MyIcon.iconset/icon_512x512@2x.png
+
+7. icns로 통합 -> 저 위에 있는 애들을 프로젝트 내부 assets 앱아이콘으로 넣어도 무관
+iconutil -c icns MyIcon.iconset
