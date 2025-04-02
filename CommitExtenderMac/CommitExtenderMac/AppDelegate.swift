@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            window.title = "CommitExtenderMac"
             
         } else {
-            print("AppDelegate: Window를 찾을 수 없습니다.")
+            SHK.error("AppDelegate: Window를 찾을 수 없습니다.")
         }
         
     }

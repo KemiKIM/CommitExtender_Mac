@@ -62,7 +62,7 @@ class CommitExtenderVC: NSViewController, NSTextFieldDelegate, NSTableViewDataSo
         if let layer = $0.layer {
             layer.cornerRadius = 10
         } else {
-            print("TextField cornerRadius 추출 불가")
+            SHK.error("TextField cornerRadius 추출 불가")
         }
     }
     
@@ -82,12 +82,22 @@ class CommitExtenderVC: NSViewController, NSTextFieldDelegate, NSTableViewDataSo
         setupScrollView()
         
         layout()
+        
+        SHK.debug("viewDidLoad")
+    }
+    
+    override func viewDidDisappear() {
+        super.viewDidDisappear()
+        
+        // init
+        self.textField.stringValue = ""
+        SHK.debug("viewDidDisappear")
     }
     
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -116,6 +126,7 @@ class CommitExtenderVC: NSViewController, NSTextFieldDelegate, NSTableViewDataSo
     func customCursorImage() -> NSCursor {
         let systemImageName = NSImage.Name("check")
         guard let systemImage = NSImage(named: systemImageName) else {
+            SHK.error("시스템 이미지를 찾을 수 없습니다.")
             fatalError("시스템 이미지를 찾을 수 없습니다.")
         }
         
@@ -126,22 +137,42 @@ class CommitExtenderVC: NSViewController, NSTextFieldDelegate, NSTableViewDataSo
         
         return customCursor
     }
-        
+
     
-    func showAlertLabel(bool: Bool, label: String) {
-        // Success Copy Alert
+    
+    func showAlert(_ type: SeeType) {
+
         DispatchQueue.main.async {
-            self.alertLabel.stringValue = label
-            self.alertLabel.textColor = .white
-            if bool == true {
+            switch type {
+                
+                // (1) Copy That
+            case .copyThat:
                 self.alertLabel.backgroundColor = .systemBlue
-            } else {
+                self.alertLabel.stringValue = #"ↀᴥↀ"#
+                self.alertLabel.textColor = .white
+
+                // (2) Not Select
+            case .notSelect:
                 self.alertLabel.backgroundColor = .systemRed
+                self.alertLabel.stringValue = "❕"
+                self.alertLabel.textColor = .white
+                
+                // (3) Empty Msg
+            case .EmptyMsg:
+                self.alertLabel.backgroundColor = .systemYellow
+                self.alertLabel.stringValue = "?"
+                self.alertLabel.textColor = .black
+                
+                // (4) other
+            default:
+                self.alertLabel.backgroundColor = .clear
+                
             }
            
         }
         
-        // Label init
+        
+        // init Label Background Color
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
             self.alertLabel.backgroundColor = .clear
             self.alertLabel.textColor = .clear
@@ -154,20 +185,23 @@ class CommitExtenderVC: NSViewController, NSTextFieldDelegate, NSTableViewDataSo
     @objc func tapBtn() {
         let selectedRow = tableView.selectedRow
         
-        // Function
+        // Check Function
         if selectedRow == -1 {
-            print("No row is selected.")
-            self.showAlertLabel(bool: false, label: "Func !")
+            SHK.debug(("No row is selected."))
+            
+            self.showAlert(SeeType(value: 1))
             return
         }
         
-        // Text
+        // Check Empty Text
         let writeString = self.textField.stringValue
         if writeString == "" {
-            print("Text is empty")
-            self.showAlertLabel(bool: false, label: "Msg !")
+            SHK.error("Text is empty")
+
+            self.showAlert(SeeType(value: 2))
             return
         }
+        
         
         // Success Copy
         let copyString = "\(self.model.gitPrefixs[self.selectNum])" + " " + self.textField.stringValue
@@ -178,7 +212,8 @@ class CommitExtenderVC: NSViewController, NSTextFieldDelegate, NSTableViewDataSo
         
         // push or pop
         self.customCursorImage().push()
-        self.showAlertLabel(bool: true, label: "OK")
+        self.showAlert(SeeType(value: 0))
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.customCursorImage().pop()
         }
@@ -194,13 +229,6 @@ class CommitExtenderVC: NSViewController, NSTextFieldDelegate, NSTableViewDataSo
 extension CommitExtenderVC {
     
     // Enter 방지
-//    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-//        if commandSelector == #selector(insertNewline(_:)) {
-//            return true
-//        }
-//        return false
-//    }
-    
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
           if commandSelector == #selector(insertNewline(_:)) {
               copyBtn.performClick(nil) // Trigger button action
@@ -210,76 +238,3 @@ extension CommitExtenderVC {
       }
     
 }
-
-
-
-// MARK: TableView
-extension CommitExtenderVC {
-    
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        return model.count
-    }
-    
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "Cell")
-        
-        var cell: NSTableCellView?
-        if let dequeuedCell = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView {
-            cell = dequeuedCell
-        } else {
-            cell = NSTableCellView()
-            cell?.identifier = cellIdentifier
-            
-            // Create a text field and add it to the cell
-            let textField = NSTextField()
-            textField.isBordered = false
-            textField.backgroundColor = .clear
-            textField.isEditable = false
-            
-            // Add the text field to the cell view
-            cell?.addSubview(textField)
-            
-            // Set constraints for the text field to fill the cell
-            textField.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                textField.leadingAnchor.constraint(equalTo: cell!.leadingAnchor, constant: 5),
-                textField.trailingAnchor.constraint(equalTo: cell!.trailingAnchor, constant: -5),
-                textField.topAnchor.constraint(equalTo: cell!.topAnchor, constant: 5),
-                textField.bottomAnchor.constraint(equalTo: cell!.bottomAnchor, constant: -5)
-            ])
-            
-            // Assign the text field to the cell's textField property
-            cell?.textField = textField
-        }
-        
-        
-        // Set the text for the current row
-        cell?.textField?.stringValue = "\(self.model.emojis[row])  \(self.model.emojiTexts[row])"
-        
-        return cell
-    }
-    
-    func tableViewSelectionDidChange(_ notification: Notification) {
-        let selectedRow = tableView.selectedRow
-        if selectedRow != -1 {
-            print("Selected row: \(selectedRow)")
-            self.selectNum = selectedRow
-            self.label.stringValue = "\(self.model.emojis[selectedRow])  \(self.model.emojiTexts[selectedRow])"
-            print(self.label.stringValue)
-        }
-    }
-    
-    
-    override func keyDown(with event: NSEvent) {
-        if event.keyCode == 36 { // Enter key code
-            if tableView.selectedRow >= 0 {
-                textField.becomeFirstResponder() // Move focus to textField
-            }
-        } else {
-            super.keyDown(with: event)
-        }
-    }
-    
-}
-
-

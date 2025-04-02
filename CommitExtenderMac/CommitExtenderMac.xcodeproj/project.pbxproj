@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0B72132D9CF85400CF19BD /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = DB0B72122D9CF85400CF19BD /* SwiftyBeaver */; };
+		DB0B72152D9CF89100CF19BD /* SwiftBeaver+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B72142D9CF88C00CF19BD /* SwiftBeaver+.swift */; };
+		DB0B72172D9D024D00CF19BD /* SeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B72162D9D023D00CF19BD /* SeeType.swift */; };
+		DB0B72192D9D073500CF19BD /* CommitExtenderVC+TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B72182D9D072E00CF19BD /* CommitExtenderVC+TV.swift */; };
 		DB80A4DF2C7F057200B85150 /* CustomWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4DE2C7F057200B85150 /* CustomWindowController.swift */; };
 		DB80A4E12C7F058800B85150 /* NSView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E02C7F058800B85150 /* NSView+.swift */; };
 		DB80A4E32C7F05CA00B85150 /* CustomSplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E22C7F05CA00B85150 /* CustomSplitVC.swift */; };
@@ -25,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB0B72142D9CF88C00CF19BD /* SwiftBeaver+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftBeaver+.swift"; sourceTree = "<group>"; };
+		DB0B72162D9D023D00CF19BD /* SeeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeType.swift; sourceTree = "<group>"; };
+		DB0B72182D9D072E00CF19BD /* CommitExtenderVC+TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommitExtenderVC+TV.swift"; sourceTree = "<group>"; };
 		DB80A4DE2C7F057200B85150 /* CustomWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWindowController.swift; sourceTree = "<group>"; };
 		DB80A4E02C7F058800B85150 /* NSView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+.swift"; sourceTree = "<group>"; };
 		DB80A4E22C7F05CA00B85150 /* CustomSplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitVC.swift; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 			files = (
 				DBA7116B2C76F47600EAE5EB /* Then in Frameworks */,
 				DBA711732C76F48600EAE5EB /* SnapKit in Frameworks */,
+				DB0B72132D9CF85400CF19BD /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +123,8 @@
 				DB80A4E62C7F073A00B85150 /* CustomEmoji */,
 				DB80A4E92C7F107700B85150 /* Setting */,
 				DBA711562C76F39600EAE5EB /* AppDelegate.swift */,
-				DBA7115A2C76F39700EAE5EB /* Assets.xcassets */,
 				DBA7115C2C76F39700EAE5EB /* Main.storyboard */,
+				DBA7115A2C76F39700EAE5EB /* Assets.xcassets */,
 				DBA7115F2C76F39700EAE5EB /* CommitExtenderMac.entitlements */,
 			);
 			path = CommitExtenderMac;
@@ -125,6 +133,7 @@
 		DBB022E72C7D510700CD7C51 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B72142D9CF88C00CF19BD /* SwiftBeaver+.swift */,
 				DBB022E82C7D510E00CD7C51 /* Alert+.swift */,
 				DB80A4E02C7F058800B85150 /* NSView+.swift */,
 			);
@@ -134,6 +143,7 @@
 		DBB022EA2C7D5B6400CD7C51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B72162D9D023D00CF19BD /* SeeType.swift */,
 				DBA711672C76F3EB00EAE5EB /* GitEmojiModel.swift */,
 			);
 			path = Model;
@@ -143,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				DBA711582C76F39600EAE5EB /* CommitExtenderVC.swift */,
+				DB0B72182D9D072E00CF19BD /* CommitExtenderVC+TV.swift */,
 				DBA711652C76F3E300EAE5EB /* CommitExtenderVC+UI.swift */,
 			);
 			path = Controller;
@@ -167,6 +178,7 @@
 			packageProductDependencies = (
 				DBA7116A2C76F47600EAE5EB /* Then */,
 				DBA711722C76F48600EAE5EB /* SnapKit */,
+				DB0B72122D9CF85400CF19BD /* SwiftyBeaver */,
 			);
 			productName = CommitExtenderMac;
 			productReference = DBA711532C76F39600EAE5EB /* CommitExtenderMac.app */;
@@ -199,6 +211,7 @@
 			packageReferences = (
 				DBA711692C76F47600EAE5EB /* XCRemoteSwiftPackageReference "Then" */,
 				DBA711712C76F48600EAE5EB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DB0B72112D9CF85400CF19BD /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = DBA711542C76F39600EAE5EB /* Products */;
 			projectDirPath = "";
@@ -228,10 +241,13 @@
 			files = (
 				DB80A4E52C7F05FC00B85150 /* LeftListVC.swift in Sources */,
 				DBA711662C76F3E300EAE5EB /* CommitExtenderVC+UI.swift in Sources */,
+				DB0B72192D9D073500CF19BD /* CommitExtenderVC+TV.swift in Sources */,
 				DB80A4E82C7F074500B85150 /* CustomEmojiVC.swift in Sources */,
 				DBB022E92C7D510E00CD7C51 /* Alert+.swift in Sources */,
+				DB0B72172D9D024D00CF19BD /* SeeType.swift in Sources */,
 				DB80A4DF2C7F057200B85150 /* CustomWindowController.swift in Sources */,
 				DBA711592C76F39600EAE5EB /* CommitExtenderVC.swift in Sources */,
+				DB0B72152D9CF89100CF19BD /* SwiftBeaver+.swift in Sources */,
 				DBA711572C76F39600EAE5EB /* AppDelegate.swift in Sources */,
 				DB80A4EB2C7F108000B85150 /* SettingVC.swift in Sources */,
 				DB80A4E12C7F058800B85150 /* NSView+.swift in Sources */,
@@ -459,6 +475,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DB0B72112D9CF85400CF19BD /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.1;
+			};
+		};
 		DBA711692C76F47600EAE5EB /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -478,6 +502,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DB0B72122D9CF85400CF19BD /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB0B72112D9CF85400CF19BD /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
 		DBA7116A2C76F47600EAE5EB /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBA711692C76F47600EAE5EB /* XCRemoteSwiftPackageReference "Then" */;

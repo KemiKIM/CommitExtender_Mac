@@ -76,7 +76,9 @@ class LeftListVC: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 // MARK: TableView
 extension LeftListVC {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return list.count
+        return 1
+        // emoji는 현재 개발중인 부분이므로, 일단 숨김
+//        return list.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -121,12 +123,12 @@ extension LeftListVC {
        
         
         guard let splitVC = self.view.window?.windowController?.contentViewController as? NSSplitViewController else {
-            print("Fail Set splitVC")
+            SHK.error("Fail Set : splitVC")
             return
         }
         
         guard let window = self.view.window else {
-            print("Fail Set window")
+            SHK.error("Fail Set : window")
             return
         }
       
