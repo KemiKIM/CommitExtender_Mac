@@ -11,8 +11,6 @@ import SnapKit
 
 class LeftListVC: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
-    let list = ["🥱 Commit", "😆 Emoji"]
-    
     let tableView = NSTableView().then {
         let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "Column"))
         $0.addTableColumn(column)
@@ -24,7 +22,6 @@ class LeftListVC: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     let scrollView = NSScrollView()
     
     let commimtExtenderVC = CommitExtenderVC()
-    let customEmojiVC = CustomEmojiVC()
     
    
     
@@ -77,8 +74,6 @@ class LeftListVC: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 extension LeftListVC {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return 1
-        // emoji는 현재 개발중인 부분이므로, 일단 숨김
-//        return list.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -110,46 +105,18 @@ extension LeftListVC {
         }
         
         
-        // Set the text for the current row
-        cell.textField?.stringValue = "\(list[row])"
-        
         return cell
     }
     
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-        let selectedRow = tableView.selectedRow
-        var changeVC: NSViewController?
-       
-        
-        guard let splitVC = self.view.window?.windowController?.contentViewController as? NSSplitViewController else {
-            SHK.error("Fail Set : splitVC")
-            return
-        }
         
         guard let window = self.view.window else {
             SHK.error("Fail Set : window")
             return
         }
-      
         
-        
-        if selectedRow == 0 {
-            changeVC = self.commimtExtenderVC
-            window.title = "CommitExtenderMac"
-
-        } else  {
-            changeVC = self.customEmojiVC
-            window.title = "Emoji"
-            
-        }
-        
-        // Change
-        if let changedVC = changeVC {
-            if splitVC.children.count > 1 {
-                splitVC.children[1] = changedVC
-            }
-        }
+        window.title = "CommitExtenderMac"
     }
 }
 

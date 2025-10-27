@@ -15,8 +15,6 @@
 		DB80A4E12C7F058800B85150 /* NSView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E02C7F058800B85150 /* NSView+.swift */; };
 		DB80A4E32C7F05CA00B85150 /* CustomSplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E22C7F05CA00B85150 /* CustomSplitVC.swift */; };
 		DB80A4E52C7F05FC00B85150 /* LeftListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E42C7F05FC00B85150 /* LeftListVC.swift */; };
-		DB80A4E82C7F074500B85150 /* CustomEmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4E72C7F074500B85150 /* CustomEmojiVC.swift */; };
-		DB80A4EB2C7F108000B85150 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A4EA2C7F108000B85150 /* SettingVC.swift */; };
 		DBA711572C76F39600EAE5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA711562C76F39600EAE5EB /* AppDelegate.swift */; };
 		DBA711592C76F39600EAE5EB /* CommitExtenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA711582C76F39600EAE5EB /* CommitExtenderVC.swift */; };
 		DBA7115B2C76F39700EAE5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA7115A2C76F39700EAE5EB /* Assets.xcassets */; };
@@ -36,8 +34,6 @@
 		DB80A4E02C7F058800B85150 /* NSView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+.swift"; sourceTree = "<group>"; };
 		DB80A4E22C7F05CA00B85150 /* CustomSplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitVC.swift; sourceTree = "<group>"; };
 		DB80A4E42C7F05FC00B85150 /* LeftListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftListVC.swift; sourceTree = "<group>"; };
-		DB80A4E72C7F074500B85150 /* CustomEmojiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmojiVC.swift; sourceTree = "<group>"; };
-		DB80A4EA2C7F108000B85150 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		DBA711532C76F39600EAE5EB /* CommitExtenderMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitExtenderMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA711562C76F39600EAE5EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBA711582C76F39600EAE5EB /* CommitExtenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitExtenderVC.swift; sourceTree = "<group>"; };
@@ -82,22 +78,6 @@
 			path = Start;
 			sourceTree = "<group>";
 		};
-		DB80A4E62C7F073A00B85150 /* CustomEmoji */ = {
-			isa = PBXGroup;
-			children = (
-				DB80A4E72C7F074500B85150 /* CustomEmojiVC.swift */,
-			);
-			path = CustomEmoji;
-			sourceTree = "<group>";
-		};
-		DB80A4E92C7F107700B85150 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				DB80A4EA2C7F108000B85150 /* SettingVC.swift */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
 		DBA7114A2C76F39600EAE5EB = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +100,6 @@
 				DBB022E72C7D510700CD7C51 /* Helper */,
 				DB80A4DC2C7F055300B85150 /* Start */,
 				DB80A4DB2C7F054500B85150 /* CommitExtender */,
-				DB80A4E62C7F073A00B85150 /* CustomEmoji */,
-				DB80A4E92C7F107700B85150 /* Setting */,
 				DBA711562C76F39600EAE5EB /* AppDelegate.swift */,
 				DBA7115C2C76F39700EAE5EB /* Main.storyboard */,
 				DBA7115A2C76F39700EAE5EB /* Assets.xcassets */,
@@ -242,14 +220,12 @@
 				DB80A4E52C7F05FC00B85150 /* LeftListVC.swift in Sources */,
 				DBA711662C76F3E300EAE5EB /* CommitExtenderVC+UI.swift in Sources */,
 				DB0B72192D9D073500CF19BD /* CommitExtenderVC+TV.swift in Sources */,
-				DB80A4E82C7F074500B85150 /* CustomEmojiVC.swift in Sources */,
 				DBB022E92C7D510E00CD7C51 /* Alert+.swift in Sources */,
 				DB0B72172D9D024D00CF19BD /* SeeType.swift in Sources */,
 				DB80A4DF2C7F057200B85150 /* CustomWindowController.swift in Sources */,
 				DBA711592C76F39600EAE5EB /* CommitExtenderVC.swift in Sources */,
 				DB0B72152D9CF89100CF19BD /* SwiftBeaver+.swift in Sources */,
 				DBA711572C76F39600EAE5EB /* AppDelegate.swift in Sources */,
-				DB80A4EB2C7F108000B85150 /* SettingVC.swift in Sources */,
 				DB80A4E12C7F058800B85150 /* NSView+.swift in Sources */,
 				DBA711682C76F3EB00EAE5EB /* GitEmojiModel.swift in Sources */,
 				DB80A4E32C7F05CA00B85150 /* CustomSplitVC.swift in Sources */,
